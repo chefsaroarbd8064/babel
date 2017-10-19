@@ -81,6 +81,7 @@ bootstrap-flow:
 	cd build/flow && git checkout $(FLOW_COMMIT)
 
 test-flow:
+	make bootstrap
 	node scripts/tests/flow/run_babylon_flow_tests.js
 
 test-flow-update-whitelist:
@@ -93,6 +94,7 @@ bootstrap-test262:
 	cd build/test262 && git checkout $(TEST262_COMMIT)
 
 test-test262:
+	make bootstrap
 	node scripts/tests/test262/run_babylon_test262.js
 
 test-test262-update-whitelist:
