@@ -26,8 +26,8 @@ before_script:
 script:
   - 'if [ "$JOB" = "test" ]; then make test-ci; fi'
   - 'if [ "$JOB" = "lint" ]; then make lint && make flow; fi'
-  - 'if [ "$JOB" = "babylon-flow-tests" ]; then make test-flow; fi'
-  - 'if [ "$JOB" = "babylon-test262-tests" ]; then make test-test262; fi'
+  - 'if [ "$JOB" = "babylon-flow-tests" ]; then make test-flow-ci; fi'
+  - 'if [ "$JOB" = "babylon-test262-tests" ]; then make test-test262-ci; fi'
 
 matrix:
   fast_finish: true
